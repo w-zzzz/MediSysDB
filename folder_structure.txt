@@ -1,0 +1,12 @@
+src/
+|-- server/
+|   |-- app.py            # Server code (Python)
+|   |-- requirements.txt  # Server dependencies
+|   |-- Dockerfile        # Dockerfile for the server
+|
+|-- website/
+|   |-- static/           # JavaScript and CSS files
+|   |-- templates/        # HTML files
+|   |-- Dockerfile        # Dockerfile for the website
+|
+|-- docker-compose.yml    # Docker Compose file to orchestrate the containers
