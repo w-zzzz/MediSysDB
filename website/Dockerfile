@@ -3,9 +3,11 @@
 # Use a lightweight web server as a parent image
 FROM nginx:alpine
 
+# Set the working directory to /app/website
+WORKDIR /app/website
+
 # Copy the static files and templates into the container at /usr/share/nginx/html
-COPY ./website/static /usr/share/nginx/html/static
-COPY ./website/templates /usr/share/nginx/html/templates
+COPY . /usr/share/nginx/html
 
 # Expose port 80 to the outside world
 EXPOSE 80

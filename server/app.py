@@ -7,7 +7,7 @@ import io
 import zipfile
 from gridfs import GridFS
 import constants
-from flask_cors import CORS
+# from flask_cors import CORS
 from helper import switch_collection, query_by_filter
 import os
 
