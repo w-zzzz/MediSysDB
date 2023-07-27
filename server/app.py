@@ -11,8 +11,8 @@ import constants
 from helper import switch_collection, query_by_filter
 import os
 
-template_folder=os.path.join(os.pardir, 'website', 'templates')
-static_folder=os.path.join(os.pardir, 'website', 'static')
+template_folder = '/usr/share/nginx/html/templates'  # Inside the website container (using the service name)
+static_folder = '/usr/share/nginx/html/static'       # Inside the website container (using the service name)
 app = Flask(__name__, template_folder = template_folder, static_folder = static_folder)
 # CORS(app)
 app.config['MONGO_URI'] = constants.MONGO_URI
@@ -125,7 +125,7 @@ def get_records(sensorID):
                     'file':record['file']
                 }
                 results.append(new_record)
-                print(str(record['user_id']))
+                # print(str(record['user_id']))
                 
             return _corsify_actual_response(jsonify(results)), 200
         else:

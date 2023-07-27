@@ -12,6 +12,8 @@ COPY . /app
 # Install any needed packages specified in requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
+EXPOSE 5000
+
 # Set the command to run the server
 CMD ["python", "app.py"]
 
