@@ -125,7 +125,7 @@ def get_records(sensorID):
                     'file':record['file']
                 }
                 results.append(new_record)
-                print(str(record['user_id']))
+                # print(str(record['user_id']))
                 
             return _corsify_actual_response(jsonify(results)), 200
         else:
@@ -221,4 +221,5 @@ def delete_records(sensorID):
         
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=5000, debug=True)
+    # app.run(debug=True)
