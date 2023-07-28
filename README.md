@@ -270,7 +270,7 @@ This schema allows efficient management and retrieval of data from various types
 
 
 ## Changelog
-### Version 1.0.0 (2023-07-01)
+### Version 1.0 (2023-07-28)
 - Initial release of the project
 - Added basic CRUD functionality for sensor data
 - Created basic web interface for manipulation
