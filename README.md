@@ -97,27 +97,10 @@ The MediSysDB database management system provides some configuration options and
 
 By following these installation and configuration instructions, you can quickly deploy and utilize the MediSysDB database management system to efficiently manage data records from various types of sensors, including radar, camera, oximeter, and more.
 
-## Usage
+**Note**: For examples of how to make API calls to the MediSysDB database management system, you can refer to the `api_calls.py` file included in the project. This file provides sample code snippets that demonstrate how to interact with the system's endpoints and perform CRUD operations on data records from different types of sensors, such as radar, camera, oximeter, and more. It serves as a helpful resource to understand the API functionalities and integrate the database management system seamlessly into your applications. Happy coding!
 
-Provide examples and explanations on how to use your database management system. Include code snippets or commands that demonstrate the main functionalities, such as creating a new database, inserting data, querying data, and managing database connections.
 
 ## API Documentation
-
-If your database management system project includes an API, provide detailed documentation on how to use the API. Include endpoints, request methods, parameters, and responses. For example:
-
-- **Endpoint**: `/api/query`
-- **Method**: POST
-- **Parameters**:
-  - `database_name` (string): Name of the database to query
-  - `query` (string): SQL query string
-- **Response**:
-  ```
-  {
-    "result": "Query executed successfully",
-    "data": [...]
-  }
-  ```
-
 
 **API: Create Record**
 - **Endpoint**: `/<string:sensorID>/create/`
@@ -242,8 +225,9 @@ If your database management system project includes an API, provide detailed doc
 
   Upon a successful request, the API will delete the matching records from the database, along with their associated files from the GridFS file storage. If no records are found that match the filtering criteria, the API will return an appropriate error message.
 
-  Note: 1. If a file associated with a record is not found in the GridFS, the API will print a message in the server log indicating that the file was not found.
-        2. If no filtering parameters are provided, all records will be deleted.
+  Note: 
+  - If a file associated with a record is not found in the GridFS, the API will print a message in the server log indicating that the file was not found.
+  - If no filtering parameters are provided, all records will be deleted.
 ## Database Schema
 
 The MediSysDB project uses MongoDB as the database management system, and it consists of four collections, each representing a different sensor: Radar, Camera, Oximeter, and Wave. Each collection has the following fields:
