@@ -1,0 +1,15 @@
+version: '3'
+services:
+  server:
+    build: ./src # Build the server service using the Dockerfile in the server folder
+    ports:
+      - "8080:5000"      # Map port 8080 from the host to port 5000 in the container
+    depends_on:
+      - mongo            # Make sure the server service depends on the MongoDB service
+
+  mongo:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./data:/data/db  # Mount the data directory for MongoDB
