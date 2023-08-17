@@ -3,3 +3,6 @@
 
 # Ignore directory created by the Python interpreter 
 __pycache__
+
+# Folder to ignore
+data/
