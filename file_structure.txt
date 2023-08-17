@@ -8,7 +8,8 @@ project_directory/
 |   |-- website/
 |   |   |-- static/           # JavaScript and CSS files
 |   |   |-- templates/        # HTML files
+|   |
+|   |-- requirements.txt  # Server dependencies
+|   |-- Dockerfile        # Dockerfile for the server
 |
-|-- requirements.txt  # Server dependencies
-|-- Dockerfile        # Dockerfile for the server
 |-- docker-compose.yml        # Docker Compose file to orchestrate the containers

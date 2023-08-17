@@ -1,7 +1,7 @@
 version: '3'
 services:
   server:
-    build: ./src # Build the server service using the Dockerfile in the server folder
+    build: ./src # Build the server service using the Dockerfile in the src folder
     ports:
       - "8080:5000"      # Map port 8080 from the host to port 5000 in the container
     depends_on:
