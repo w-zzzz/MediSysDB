@@ -1,0 +1,14 @@
+project_directory/
+|-- data/
+|
+|-- src/
+|   |-- server/
+|   |   |-- app.py            # Server code (Python)
+|   |
+|   |-- website/
+|   |   |-- static/           # JavaScript and CSS files
+|   |   |-- templates/        # HTML files
+|
+|-- requirements.txt  # Server dependencies
+|-- Dockerfile        # Dockerfile for the server
+|-- docker-compose.yml        # Docker Compose file to orchestrate the containers

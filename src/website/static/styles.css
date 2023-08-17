@@ -1,0 +1,139 @@
+
+/* Center title and sensor buttons */
+.container {
+    text-align: center;
+}
+
+.sensor-button {
+    display: inline-block;
+}
+
+
+/* Style for sensor buttons */
+.sensor-button {
+    font-size: 24px;
+    padding: 10px 20px;
+}
+
+/* Style for selected sensor button */
+.sensor-button.selected {
+    font-weight: bold;
+}
+
+/* Style for action buttons */
+.action-button {
+    font-size: 15px;
+    padding: 10px 20px;
+    margin-top: 10px; /* Add some top margin for spacing */
+}
+
+#getRecordsButton {
+    margin-right: 10px; /* Add right margin to create space */
+}
+
+#downloadRecordsButton {
+    margin-left: 10px; /* Add left margin to create space */
+}
+
+/* Place "Create Record" and "Get Records" sections sections horizontally */
+#form-container {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Allow the sections to wrap to a new line */
+    margin-bottom: 30px; /* Add some bottom margin for spacing */
+}
+
+.form-section {
+    font-size: 16px;
+    flex-basis: 45%;
+    margin: 25px;
+    line-height: 2.5;
+}
+
+.form-section label {
+    text-align: left;
+    margin: 5px;
+}
+
+.form-section input[type="text"] {
+    width: 30%; /* Set the width to occupy the full available space */
+    box-sizing: border-box; /* Include padding and border in the width calculation */
+    margin: 5px;
+    border: 1px solid #000;
+    padding: 5px;
+}
+
+.form-section input[type="file"] {
+    width: 30%; /* Set the width to occupy the full available space */
+    box-sizing: border-box; /* Include padding and border in the width calculation */
+    margin: 5px;
+    padding: 10px;
+    font-size: 12px;
+
+}
+
+textarea {
+    border: 1px solid #000;
+    padding: 5px;
+}
+
+.table-container {
+    margin: 50px;
+    text-align: center;
+    border: 1px solid #ccc; /* Add a border */
+    padding: 15px; /* Add some padding */
+    border-radius: 5px; /* Add border radius for rounded corners */
+    background-color: #f5f5f5; /* Add a background color */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Add a box shadow */
+}
+
+/* Divide table cells evenly and center text content of each cell accordingly */
+#recordsTable {
+    width: 100%;
+    box-sizing: border-box; /* Include borders in the width calculation */
+    border-collapse: collapse;
+    border: 1px solid #000;
+    table-layout: fixed;
+    margin-bottom: 10px;
+    margin: 15px; /* Adjust the margin as needed */
+}
+
+#recordsTable th,
+#recordsTable td {
+    border: 1px solid #000;
+    padding: 5px;
+    text-align: center;
+    width: calc(100% / 3); /* Distribute cells evenly across the row */
+}
+
+.sort-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+}
+
+.sort-buttons span {
+    margin-right: 10px;
+}
+
+.sort-buttons button {
+    margin-right: 5px;
+}
+
+.sort-buttons button.selected {
+    background-color: grey;
+    /* Additional styles for the selected button */
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pagination button {
+    margin: 5px;
+}
