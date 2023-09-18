@@ -47,3 +47,10 @@ def query_by_filter(user_id, start_time, end_time):
             query['time']['$lte'] = end_datetime
             
     return query
+
+def is_valid_date(date_string):
+    try:
+        datetime.strptime(date_string, '%d/%m/%Y')
+        return True
+    except ValueError:
+        return False

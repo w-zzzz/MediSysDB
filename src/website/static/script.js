@@ -176,14 +176,33 @@ function displayRecords() {
     recordsToShow.forEach(function(record) {
         var row = document.createElement('tr');
         var userIDCell = document.createElement('td');
+        var nameCell = document.createElement('td');
+        var dobIDCell = document.createElement('td');
+        var sexCell = document.createElement('td');
+        var highBPCell = document.createElement('td');
+        var actSBPCell = document.createElement('td');
+        var actDBPCell = document.createElement('td');
+
         var timeCell = document.createElement('td');
         var fileCell = document.createElement('td');
 
         userIDCell.textContent = record.user_id;
+        nameCell.textContent = record.name;
+        dobIDCell.textContent = record.dob;
+        sexCell.textContent = record.sex;
+        highBPCell.textContent = record.high_bp;
+        actSBPCell.textContent = record.actual_sbp;
+        actDBPCell.textContent = record.actual_dbp;
         timeCell.textContent = record.time;
         fileCell.textContent = record.file;
 
         row.appendChild(userIDCell);
+        row.appendChild(nameCell);
+        row.appendChild(dobIDCell);
+        row.appendChild(sexCell);
+        row.appendChild(highBPCell);
+        row.appendChild(actSBPCell);
+        row.appendChild(actDBPCell);
         row.appendChild(timeCell);
         row.appendChild(fileCell);
 

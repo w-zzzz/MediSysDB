@@ -20,11 +20,21 @@
         <div id="create-form" class="form-section">
             <h2>Create Record</h2>
             <form id="createRecordForm" action="/create" method="POST" enctype="multipart/form-data">
-                <label>User ID:</label>
-                <input type="text" name="user_id"><br>
+                <label>Name:</label>
+                <input type="text" name="name"><br>
+                <label>DOB (dd/mm/yyyy):</label>
+                <input type="text" name="dob"><br>
+                <label>Sex (M/F):</label>
+                <input type="text" name="sex"><br>
+                <label>High BP (Y/N):</label>
+                <input type="text" name="high_bp"><br>
+                <label>Actual SBP (mmHg):</label>
+                <input type="text" name="actual_sbp"><br>
+                <label>Actual DBP (mmHg):</label>
+                <input type="text" name="actual_dbp"><br>
                 <label>Time:</label>
                 <input type="text" name="time"><br>
-                <label>File:</label>
+                <label>File ('txt', 'npy', 'pdf'):</label>
                 <input type="file" name="file"><br>
                 <button id="createRecordButton" class="action-button">Create Record</button>
             </form>
@@ -36,6 +46,8 @@
             <form id="getRecordsForm" action="/records" method="GET">
                 <label>User ID:</label>
                 <input type="text" name="user_id"><br>
+                <label>Name:</label>
+                <input type="text" name="name"><br>
                 <label>Start Time:</label>
                 <input type="text" name="start_date"><br>
                 <label>End Time:</label>
@@ -59,6 +71,12 @@
             <thead>
                 <tr>
                     <th>User ID</th>
+                    <th>Name</th>
+                    <th>DOB</th>
+                    <th>Sex</th>
+                    <th>High BP</th>
+                    <th>Actual SBP</th>
+                    <th>Actual DBP</th>
                     <th>Time</th>
                     <th>File</th>
                 </tr>
