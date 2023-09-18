@@ -164,8 +164,6 @@ def get_records(sensorID):
         user_info = users_collection.find_one({'name': name})
         if user_info:
             user_id = user_info['user_id']
-            print(name)
-            print(user_id)
         else:
             return jsonify({"status": "User not found in the 'users' collection."}), 400
     elif user_id:
@@ -305,10 +303,13 @@ def update_record(sensorID):
     start_time = request.args.get('start_date')
     end_time = request.args.get('end_date')
 
-    user_id = int(user_id)
-    if not user_id and name:
+    if user_id:
+        user_id = int(user_id)
+    elif name:
         user_info = collection.find_one({'name': name})
         user_id = user_info['user_id']
+    else:
+        return jsonify({"status": "Name or userID required."}), 400     
             
     query = query_by_filter(user_id, start_time, end_time)
     records = list(collection.find(query))
@@ -333,10 +334,13 @@ def update_user(sensorID):
     start_time = request.args.get('start_date')
     end_time = request.args.get('end_date')
 
-    user_id = int(user_id)
-    if not user_id and name:
+    if user_id:
+        user_id = int(user_id)
+    elif name:
         user_info = collection.find_one({'name': name})
         user_id = user_info['user_id']
+    else:
+        return jsonify({"status": "Name or userID required."}), 400 
             
     query = query_by_filter(user_id, start_time, end_time)
     records = list(collection.find(query))
@@ -358,11 +362,14 @@ def delete_records(sensorID):
     start_time = request.args.get('start_date')
     end_time = request.args.get('end_date')
         
-    user_id = int(user_id)
-    if not user_id and name:
+    if user_id:
+        user_id = int(user_id)
+    elif name:
         user_info = collection.find_one({'name': name})
         user_id = user_info['user_id']
-        
+    else:
+        user_id = '' 
+         
     query = query_by_filter(user_id, start_time, end_time)
     records = list(collection.find(query))
     if records:
@@ -384,5 +391,5 @@ def delete_records(sensorID):
         
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=8000, debug=True)
+    app.run(host='0.0.0.0', port=5000, debug=True)
     # app.run(debug=True)
